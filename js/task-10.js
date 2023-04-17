@@ -27,6 +27,7 @@ const createBoxes = (amount) => {
 
 const destroyBoxes = () => {
   boxesList.innerHTML = "";
+  inputEl.value = "";
 };
 
 btnCreate.addEventListener("click", () => createBoxes(inputEl.value));

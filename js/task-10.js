@@ -16,6 +16,7 @@ const createBoxes = (amount) => {
     itemEl.classList.add("box-div");
     itemEl.style.backgroundColor = getRandomHexColor();
     const result = boxesList.children.length;
+
     if (result > 0) {
       itemEl.style.width = `${30 + result * 10}px`;
       itemEl.style.height = `${30 + result * 10}px`;

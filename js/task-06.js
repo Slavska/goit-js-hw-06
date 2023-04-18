@@ -3,10 +3,12 @@ const inputEl = document.querySelector("#validation-input");
 const addEventClass = (event) => {
   if (event.target.value.length == inputEl.getAttribute("data-length")) {
     inputEl.classList.remove("invalid");
-    return inputEl.classList.add("valid");
+    inputEl.classList.add("valid");
+    return;
   } else {
     inputEl.classList.remove("valid");
-    return inputEl.classList.add("invalid");
+    inputEl.classList.add("invalid");
+    return;
   }
 };
 

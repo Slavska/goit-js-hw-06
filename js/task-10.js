@@ -14,14 +14,18 @@ const createBoxes = (amount) => {
   for (let i = 0; i < amount; i++) {
     const itemEl = document.createElement("div");
     itemEl.classList.add("box-div");
-    let size = 30 + i * 10;
-
-    itemEl.style.width = `${size}px`;
-    itemEl.style.height = `${size}px`;
     itemEl.style.backgroundColor = getRandomHexColor();
-    boxesList.append(itemEl);
+    const result = boxesList.children.length;
+    if (result > 0) {
+      itemEl.style.width = `${30 + result * 10}px`;
+      itemEl.style.height = `${30 + result * 10}px`;
+      boxesList.append(itemEl);
+    } else {
+      itemEl.style.width = `${30 + i * 10}px`;
+      itemEl.style.height = `${30 + i * 10}px`;
+      boxesList.append(itemEl);
+    }
   }
-
   return boxesList;
 };
 
